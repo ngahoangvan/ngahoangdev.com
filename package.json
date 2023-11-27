@@ -4,14 +4,14 @@
   "description": "A minimal, responsive, and feature-rich Jekyll theme for technical writing.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cotes2020/jekyll-theme-chirpy.git"
+    "url": "git+https://github.com/ngahoangvan/blog.git"
   },
-  "author": "Cotes Chung",
+  "author": "Nga Hoang",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
+    "url": "https://github.com/ngahoangvan/blog/issues"
   },
-  "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy/",
+  "homepage": "https://github.com/ngahoangvan/blog/",
   "scripts": {
     "prebuild": "npx rimraf assets/js/dist",
     "build": "NODE_ENV=production npx rollup -c --bundleConfigAsCjs",

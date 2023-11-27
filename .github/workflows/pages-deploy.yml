@@ -38,7 +38,7 @@ jobs:
         run: bundle exec jekyll b -d "_site"
         env:
           JEKYLL_ENV: "production"
-
+      
       # - name: Test site
       #   run: |
       #     bundle exec htmlproofer _site \
