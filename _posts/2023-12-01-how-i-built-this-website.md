@@ -1,5 +1,5 @@
 ---
-title: How I built this website? - Jekyll and AWS
+title: How I built this website? - Jekyll and AWS (Part 1)
 author: nga
 date: 2023-12-05 21:00:00 +0700
 categories: [Technical sharing]
