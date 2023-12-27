@@ -2,7 +2,7 @@
 title: Setup Jupyter Lab with Plotly
 author: nga
 date: 2023-12-20 12:00:00 +0700
-categories: [Technical sharing]
+categories: [Technical sharing, Python]
 tags: [jupyter, dash, docker, on-premise]
 render_with_liquid: false
 ---
