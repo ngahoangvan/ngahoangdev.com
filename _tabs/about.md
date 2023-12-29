@@ -1,7 +1,7 @@
 ---
 # the default layout is 'page'
 icon: fas fa-info-circle
-order: 4
+order: 5
 ---
 
 Greetings! 👋 I'm Nga, Python Engineer with 5+ years of hands-on experience. I'm passionate about leveraging Python's power to build robust applications. With my knowledge of AWS services and Linux, I enjoy architecting scalable solutions that seamlessly blend code and infrastructure. Here you’ll find various articles about some of my insights and challenges long my software development journey.
