@@ -126,7 +126,7 @@ Again, after the settings have been configured, verify you can see the HTML page
 ![Output](/assets/img/posts/how-i-built-this-website/output-1.png)
 _Output_
 
-> The `https://jekyll.jhoangv.com/` will be accessible from now until I finish this series. Don't worry about the final output, it will be similar to this page. I'll make sure to share all the knowledge with you.
+> The `https://jekyll.jhoangv.com/` is no longer accessible since I have concluded this series. Don't worry about the final output, it is similar to this page. I'll make sure to share all the knowledge with you.
 {: .prompt-warning }
 
 In next article, I will show you how to setup the [Jekyll](https://github.com/cotes2020/jekyll-theme-chirpy) source on github, and using Github Action as the CI/CD to automatic build the code and deploy to the AWS.
