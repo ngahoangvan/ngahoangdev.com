@@ -31,8 +31,8 @@ url: "https://blog.jhoangv.com"
 github:
   username: ngahoangvan # change to your github username
 
-# twitter:
-#   username: twitter_username # change to your twitter username
+linkedin:
+  username: ngahoangvan
 
 social:
   # Change to your full name.
@@ -55,6 +55,9 @@ google_site_verification: # fill in to your verification string
 google_analytics:
   # fill in your Google Analytics ID
   id: G-WW1YDWBZE1 
+
+google_tag_manager:
+  id: GTM-W6N5JH7G
 
 # Prefer color scheme setting.
 #
