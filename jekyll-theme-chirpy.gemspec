@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata = {
     "bug_tracker_uri"   => "https://github.com/ngahoangvan/blog/issues",
     "documentation_uri" => "https://github.com/ngahoangvan/blog/#readme",
-    "homepage_uri"      => "https://blog.jhoangv.com",
+    "homepage_uri"      => "https://ngahoangdev.com",
     "source_code_uri"   => "https://github.com/ngahoangvan/blog",
     "wiki_uri"          => "https://github.com/ngahoangvan/blog/wiki",
     "plugin_type"       => "theme"

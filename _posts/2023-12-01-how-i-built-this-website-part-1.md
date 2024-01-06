@@ -134,6 +134,9 @@ So please wait and feel free to give me your comment via <ngahv2222@gmail.com> o
 
 This is the first time I write a sharing article so your comments are my motivation. Thanks!
 
+> Update: In 6 Jan 2024, I changed my domain from `blog.jhoangv.com` to `ngahoangdev.com`.
+{: .prompt-info }
+
 ## References
 Here are a couple other articles that were helpful in getting this setup:
 - [Hosting a Jekyll Static Website on AWS S3 with CloudFront](https://predicatemethod.com/posts/hosting-a-jekyll-static-website-on-aws-s3-with-cloudfront/)
