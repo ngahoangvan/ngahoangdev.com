@@ -22,7 +22,8 @@ tagline: |
 # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  Explore the world of technology and programming with Nga Hoang's Dev Blog.
+  Discover insightful articles on web development, software engineering, and the latest trends in the tech industry
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -47,7 +48,7 @@ social:
     - https://www.facebook.com/nga.v.hoang
     - https://www.linkedin.com/in/ngahoangvan
 
-google_site_verification: # fill in to your verification string
+google_site_verification: e91xrkHTW6Y_m9stXLBnNFXQPMFxSWZUGslDBmzeBS8
 
 # ↑ --------------------------
 # The end of `jekyll-seo-tag` settings
