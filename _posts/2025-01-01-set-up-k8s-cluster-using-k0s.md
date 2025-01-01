@@ -3,7 +3,7 @@ title: Set up a Kubernetes cluster using k0s
 author: nga
 date: 2025-1-1 00:00:00 +0700
 categories: [Technical sharing, Kubernetes, open-source]
-tags: [k0s, k8s, oss]
+tags: [k0s, k8s, oss, on-premise]
 render_with_liquid: false
 image:
   path: /assets/img/posts/set-up-k8s-cluster-using-k0s/k0s-logo.png
@@ -11,6 +11,7 @@ image:
 ---
 
 Hello everyone, its new year 2025 and I'm back after a long time! Today, I want to share how to set up a Kubernetes cluster using k0s, which I just learned about a couple of days ago. I've been using k0s for a while now, and I'm very happy with it. It's lightweight, easy to use, and simple to install. In this post, I'll show you the steps to set up a Kubernetes cluster with k0s.
+
 ## Prerequisites
 You'll need at least tow VPS for this setup. In this article, I'm going to use 2 VPS. Let's go step by step
 
