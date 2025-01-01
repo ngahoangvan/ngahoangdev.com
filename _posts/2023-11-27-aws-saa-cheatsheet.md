@@ -4,6 +4,9 @@ author: nga
 date: 2023-11-27 15:00:00 +0700
 categories: [AWS, Certification, Cheat Sheet]
 tags: [Solutions Architect, Associate, SAA-C03]
+image:
+  path: /assets/img/posts/aws-saa-cheatsheet/aws-certified-solutions-architect-associate600.png
+  alt: Jekyll and AWS
 ---
 
 ## Introduction

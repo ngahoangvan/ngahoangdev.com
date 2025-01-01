@@ -5,6 +5,9 @@ date: 2023-12-05 21:00:00 +0700
 categories: [Technical sharing, AWS]
 tags: [aws, jekyll, cloudfront, s3, route53]
 render_with_liquid: false
+image:
+  path: /assets/img/posts/how-i-built-this-website/jekyll-chirpy-icon.png
+  alt: Jekyll and AWS
 ---
 
 Welcome to my first article. This will show you how I setup, manage and publish my blog website to the internet.

@@ -5,6 +5,9 @@ date: 2023-12-20 12:00:00 +0700
 categories: [Technical sharing, Python]
 tags: [jupyter, dash, docker, on-premise]
 render_with_liquid: false
+image:
+  path: /assets/img/posts/setup-jupyter-with-plotly/jupyter-and-plotly.png
+  alt: Jupyter and Plotly-Dash
 ---
 
 This article will show you how to setup Jupyter Lab and install some Python Packages for Data Analysis and Data Visualization work.

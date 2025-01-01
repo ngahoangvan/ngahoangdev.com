@@ -5,6 +5,9 @@ date: 2024-01-01 7:00:00 +0700
 categories: [Technical sharing, AWS]
 tags: [aws, jekyll, cloudfront, s3, route53]
 render_with_liquid: false
+image:
+  path: /assets/img/posts/how-i-built-this-website/jekyll-chirpy-icon.png
+  alt: Jekyll and AWS
 ---
 
 In [previous article](/posts/how-i-built-this-website-part-1), I have shared how to setup Jekyll Blogs on AWS by using S3, Cloudfront and Route53. In this one, we continue to use Github and Github Action for automation build and deploy to AWS. Let's start...

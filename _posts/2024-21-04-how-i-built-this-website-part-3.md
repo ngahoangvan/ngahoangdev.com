@@ -5,6 +5,9 @@ date: 2024-04-21 10:00:00 +0700
 categories: [Technical sharing, AWS]
 tags: [aws, jekyll, cloudfront, s3, route53]
 render_with_liquid: false
+image:
+  path: /assets/img/posts/how-i-built-this-website/jekyll-chirpy-icon.png
+  alt: Jekyll and AWS
 ---
 
 In [previous article](/posts/how-i-built-this-website-part-2), I have shared how to use Github and Github Action for automation build and deploy to AWS. We need the final step to avoid the issue `NoSuchKey` which is returned from S3

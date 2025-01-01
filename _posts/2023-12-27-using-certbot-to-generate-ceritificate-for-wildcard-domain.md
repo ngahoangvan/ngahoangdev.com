@@ -5,6 +5,9 @@ date: 2023-12-27 15:00:00 +0700
 categories: [Technical sharing, Security]
 tags: [certbot, dns, docker, on-premise]
 render_with_liquid: false
+image:
+  path: /assets/img/posts/using-certbot-to-generate-certificate-for-wildcard-domain/nginx-certbot-letsencrypt.jpg
+  alt: Nginx - Certbot - Lets encrypt.
 ---
 
 In this guide, we'll explore the process of utilizing Certbot for the creation of Let's Encrypt wildcard certificates.
