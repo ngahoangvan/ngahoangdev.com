@@ -1,5 +1,5 @@
 ---
-title: Set up a Nginx Ingress on k0s
+title: Set up a Nginx Ingress on k8s
 author: nga
 date: 2025-01-29 00:00:00 +0700
 categories: [Technical sharing, Kubernetes, open-source]
