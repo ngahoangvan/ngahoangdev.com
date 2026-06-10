@@ -6,6 +6,7 @@
   window.BlogChat.sendMessage(messages, handlers) -> { abort() }
     messages: [{ role: 'user' | 'assistant', content: string }, ...]
     handlers: { onDelta(chunk), onSources([{title, url}]), onDone(), onError(err) }
+    Callers must abort() the previous handle before calling sendMessage again.
 */
 
 (function () {
@@ -137,7 +138,7 @@
   function sendMessage(messages, handlers) {
     var aborted = false;
     var last = messages[messages.length - 1];
-    var text = last ? last.content : '';
+    var text = last && typeof last.content === 'string' ? last.content : '';
 
     if (text.indexOf('__fail__') !== -1) {
       setTimeout(function () {
