@@ -17,12 +17,18 @@
       .replace(/"/g, '&quot;');
   }
 
+  function isSafeHref(href) {
+    return /^(https?:\/\/|\/|#)/i.test(href);
+  }
+
   function renderInline(text) {
     return text
       .replace(/`([^`]+)`/g, '<code>$1</code>')
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-      .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, '<a href="$2">$1</a>');
+      .replace(/\[([^\]]+)\]\((\S+)\)/g, function (match, label, href) {
+        return isSafeHref(href) ? '<a href="' + href + '">' + label + '</a>' : label;
+      });
   }
 
   function renderBlock(block) {
@@ -91,6 +97,7 @@
     var messages = [];
     var stream = null;
     var currentAnswer = '';
+    var activeContent = null;
 
     function isStreaming() {
       return stream !== null;
@@ -154,6 +161,9 @@
 
       box.className = 'chat-sources';
       sources.forEach(function (s) {
+        if (!isSafeHref(s.url)) {
+          return;
+        }
         var a = document.createElement('a');
 
         a.className = 'chat-source-chip';
@@ -166,12 +176,14 @@
     }
 
     function startStream(content) {
+      activeContent = content;
       content.innerHTML = THINKING_HTML;
       currentAnswer = '';
 
       var firstDelta = true;
+      var settled = false;
 
-      stream = window.BlogChat.sendMessage(messages, {
+      var handle = window.BlogChat.sendMessage(messages, {
         onDelta: function (chunk) {
           if (firstDelta) {
             content.innerHTML = '';
@@ -185,10 +197,12 @@
           appendSources(content, sources);
         },
         onDone: function () {
+          settled = true;
           messages.push({ role: 'assistant', content: currentAnswer });
           finishStream();
         },
         onError: function () {
+          settled = true;
           finishStream();
           content.innerHTML =
             '<span class="chat-msg-system">Something went wrong. ' +
@@ -198,6 +212,10 @@
           });
         }
       });
+
+      if (!settled) {
+        stream = handle;
+      }
       setComposerState();
     }
 
@@ -222,7 +240,11 @@
     sendBtn.addEventListener('click', function () {
       if (isStreaming()) {
         stream.abort();
-        messages.push({ role: 'assistant', content: currentAnswer });
+        if (currentAnswer !== '') {
+          messages.push({ role: 'assistant', content: currentAnswer });
+        } else if (activeContent) {
+          activeContent.innerHTML = '<span class="chat-msg-system">Stopped.</span>';
+        }
         finishStream();
       } else {
         send(input.value);
@@ -252,7 +274,9 @@
 
     if (launcher) {
       launcher.addEventListener('click', openPanel);
-      closeBtn.addEventListener('click', closePanel);
+      if (closeBtn) {
+        closeBtn.addEventListener('click', closePanel);
+      }
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && !root.hidden) {
           closePanel();
