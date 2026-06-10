@@ -60,6 +60,11 @@ google_analytics:
 google_tag_manager:
   id: GTM-W6N5JH7G
 
+# Blog chatbot (UI only for now — backend arrives with build-log Part 3)
+chatbot:
+  enabled: true
+  name: "Ask Nga"
+
 # Prefer color scheme setting.
 #
 # Note: Keep empty will follow the system prefer color by default,

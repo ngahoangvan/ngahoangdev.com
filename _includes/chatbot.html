@@ -1,0 +1,46 @@
+{% assign mode = include.mode | default: 'widget' %}
+
+{% if mode == 'widget' %}
+  <button id="chat-launcher" class="chat-launcher" type="button" aria-label="Open chat" aria-expanded="false">
+    <i class="fas fa-comment-dots"></i>
+  </button>
+{% endif %}
+
+<div id="chat-root" class="chat-root chat-mode-{{ mode }}" {% if mode == 'widget' %}hidden{% endif %}>
+  <div class="chat-panel" role="dialog" aria-label="{{ site.chatbot.name }}">
+    <header class="chat-header">
+      <div class="chat-header-text">
+        <span class="chat-title">{{ site.chatbot.name }} · AI</span>
+        <span class="chat-subtitle">Answers come from my blog posts</span>
+      </div>
+      {% if mode == 'widget' %}
+        <button id="chat-close" class="chat-close" type="button" aria-label="Close chat">
+          <i class="fas fa-times"></i>
+        </button>
+      {% endif %}
+    </header>
+
+    <div id="chat-messages" class="chat-messages" aria-live="polite">
+      <div id="chat-empty" class="chat-empty">
+        <p class="chat-greeting">What can I help you find?</p>
+        <p class="chat-greeting-sub">Ask me anything I have written about.</p>
+        <div class="chat-suggestions">
+          <button class="chat-chip" type="button">How do I set up a k0s cluster?</button>
+          <button class="chat-chip" type="button">What replaced Ingress NGINX?</button>
+          <button class="chat-chip" type="button">How was this blog built?</button>
+          <button class="chat-chip" type="button">What AWS certs are you working on?</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="chat-composer">
+      <textarea id="chat-input" rows="1" placeholder="Ask about my posts…" aria-label="Message"></textarea>
+      <button id="chat-send" class="chat-send" type="button" aria-label="Send" disabled>
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </footer>
+  </div>
+</div>
+
+<script defer src="{{ '/assets/js/chatbot/chat-api.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/chatbot/chat-ui.js' | relative_url }}"></script>

@@ -71,6 +71,10 @@ layout: compress
 
     <div id="mask"></div>
 
+    {% if site.chatbot.enabled and page.url != '/chat/' %}
+      {% include chatbot.html mode='widget' %}
+    {% endif %}
+
     {% if site.pwa.enabled %}
       {% include_cached notification.html lang=lang %}
     {% endif %}
