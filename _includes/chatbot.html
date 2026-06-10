@@ -1,13 +1,13 @@
 {% assign mode = include.mode | default: 'widget' %}
 
 {% if mode == 'widget' %}
-  <button id="chat-launcher" class="chat-launcher" type="button" aria-label="Open chat" aria-expanded="false">
+  <button id="chat-launcher" class="chat-launcher" type="button" aria-label="Open chat" aria-expanded="false" aria-controls="chat-root">
     <i class="fas fa-comment-dots"></i>
   </button>
 {% endif %}
 
 <div id="chat-root" class="chat-root chat-mode-{{ mode }}" {% if mode == 'widget' %}hidden{% endif %}>
-  <div class="chat-panel" role="dialog" aria-label="{{ site.chatbot.name }}">
+  <div class="chat-panel" role="dialog" aria-modal="true" aria-label="{{ site.chatbot.name }}">
     <header class="chat-header">
       <div class="chat-header-text">
         <span class="chat-title">{{ site.chatbot.name }} · AI</span>
