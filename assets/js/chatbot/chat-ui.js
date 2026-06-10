@@ -26,7 +26,7 @@
       .replace(/`([^`]+)`/g, '<code>$1</code>')
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
       .replace(/\*([^*]+)\*/g, '<em>$1</em>')
-      .replace(/\[([^\]]+)\]\((\S+)\)/g, function (match, label, href) {
+      .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (match, label, href) {
         return isSafeHref(href) ? '<a href="' + href + '">' + label + '</a>' : label;
       });
   }
