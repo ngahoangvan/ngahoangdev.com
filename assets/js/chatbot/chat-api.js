@@ -115,6 +115,11 @@
       return;
     }
 
+    if (!response.body) {
+      fail(new Error('Response had no body'));
+      return;
+    }
+
     var reader = response.body.getReader();
     var decoder = new TextDecoder();
     var buffer = '';

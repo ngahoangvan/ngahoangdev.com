@@ -120,6 +120,21 @@ test('other HTTP errors produce a generic error without userMessage', async func
   assert.equal(h.calls.errors[0].userMessage, undefined);
 });
 
+test('a 200 response with no body reports an error instead of throwing', async function () {
+  var env = helpers.loadClient({
+    fetch: function () {
+      return Promise.resolve({ ok: true, status: 200, body: null });
+    }
+  });
+  var h = helpers.collectHandlers();
+
+  env.BlogChat.sendMessage([{ role: 'user', content: 'hi' }], h.handlers);
+  await h.settled;
+
+  assert.equal(h.calls.errors.length, 1);
+  assert.equal(h.calls.done, 0);
+});
+
 test('error event surfaces the backend message as userMessage', async function () {
   var env = helpers.loadClient({
     fetch: function () {
