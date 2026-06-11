@@ -64,7 +64,7 @@ google_tag_manager:
 chatbot:
   enabled: true
   name: "Jacob"
-  api_url: "https://chat.ngahoangdev.com"
+  api_url: "https://blog-api.ngahoangdev.com"
 
 # Prefer color scheme setting.
 #
