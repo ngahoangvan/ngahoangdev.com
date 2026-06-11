@@ -18,6 +18,7 @@
     "prewatch": "npx rimraf assets/js/dist",
     "watch": "npx rollup -c --bundleConfigAsCjs -w",
     "test": "npx stylelint _sass/**/*.scss",
+    "test:js": "node --test \"tests/chatbot/*.test.js\"",
     "fixlint": "npm run test -- --fix",
     "dev": "bundle exec jekyll s"
   },

@@ -12,6 +12,38 @@
 (function () {
   'use strict';
 
+  /* Extract complete SSE frames from buffer; the unterminated tail is
+     returned as rest so the caller can prepend it to the next chunk. */
+  function parseSSE(buffer) {
+    var frames = buffer.replace(/\r\n/g, '\n').split('\n\n');
+    var rest = frames.pop();
+    var events = [];
+
+    frames.forEach(function (frame) {
+      var name = '';
+      var dataLines = [];
+
+      frame.split('\n').forEach(function (line) {
+        if (line.indexOf('event:') === 0) {
+          name = line.slice(6).trim();
+        } else if (line.indexOf('data:') === 0) {
+          dataLines.push(line.slice(5).replace(/^ /, ''));
+        }
+      });
+
+      if (name === '' || dataLines.length === 0) {
+        return;
+      }
+      try {
+        events.push({ event: name, data: JSON.parse(dataLines.join('\n')) });
+      } catch (err) {
+        /* malformed frame — drop it */
+      }
+    });
+
+    return { events: events, rest: rest };
+  }
+
   var STREAM_DELAY_MS = 40;
   var THINKING_DELAY_MS = 700;
 
@@ -184,6 +216,7 @@
 
   window.BlogChat = {
     sendMessage: sendMessage,
-    _findEntry: findEntry
+    _findEntry: findEntry,
+    _parseSSE: parseSSE
   };
 })();
