@@ -110,6 +110,15 @@
 
       if (response.status === 429) {
         httpErr.userMessage = RATE_LIMIT_MESSAGE;
+        try {
+          var body = await response.json();
+
+          if (body && typeof body.detail === 'string') {
+            httpErr.userMessage = body.detail;
+          }
+        } catch (err) {
+          /* missing or unparseable body — keep the fallback message */
+        }
       }
       fail(httpErr);
       return;

@@ -105,6 +105,29 @@ test('maps HTTP 429 to a rate-limit userMessage', async function () {
   assert.match(h.calls.errors[0].userMessage, /too quickly/);
 });
 
+test('429 with a JSON detail body surfaces it as userMessage', async function () {
+  var env = helpers.loadClient({
+    fetch: function () {
+      return Promise.resolve({
+        ok: false,
+        status: 429,
+        json: function () {
+          return Promise.resolve({
+            detail: 'Jacob has answered a lot today and hit the daily limit — please come back tomorrow.'
+          });
+        }
+      });
+    }
+  });
+  var h = helpers.collectHandlers();
+
+  env.BlogChat.sendMessage([{ role: 'user', content: 'hi' }], h.handlers);
+  await h.settled;
+
+  assert.equal(h.calls.errors.length, 1);
+  assert.match(h.calls.errors[0].userMessage, /daily limit/);
+});
+
 test('other HTTP errors produce a generic error without userMessage', async function () {
   var env = helpers.loadClient({
     fetch: function () {

@@ -63,7 +63,7 @@ google_tag_manager:
 # Blog chatbot — answers stream from the blog-chat backend
 chatbot:
   enabled: true
-  name: "Ask Nga"
+  name: "Jacob"
   api_url: "https://chat.ngahoangdev.com"
 
 # Prefer color scheme setting.
