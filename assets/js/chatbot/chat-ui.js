@@ -201,11 +201,13 @@
           messages.push({ role: 'assistant', content: currentAnswer });
           finishStream();
         },
-        onError: function () {
+        onError: function (err) {
           settled = true;
           finishStream();
+          var msg = err && err.userMessage ? escapeHtml(err.userMessage) : 'Something went wrong.';
+
           content.innerHTML =
-            '<span class="chat-msg-system">Something went wrong. ' +
+            '<span class="chat-msg-system">' + msg + ' ' +
             '<button type="button" class="chat-retry">Retry</button></span>';
           content.querySelector('.chat-retry').addEventListener('click', function () {
             startStream(content);

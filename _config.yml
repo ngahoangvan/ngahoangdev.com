@@ -60,10 +60,11 @@ google_analytics:
 google_tag_manager:
   id: GTM-W6N5JH7G
 
-# Blog chatbot (UI only for now — backend arrives with build-log Part 3)
+# Blog chatbot — answers stream from the blog-chat backend
 chatbot:
   enabled: true
   name: "Ask Nga"
+  api_url: "https://chat.ngahoangdev.com"
 
 # Prefer color scheme setting.
 #

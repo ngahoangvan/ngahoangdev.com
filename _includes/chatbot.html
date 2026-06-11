@@ -6,7 +6,7 @@
   </button>
 {% endif %}
 
-<div id="chat-root" class="chat-root chat-mode-{{ mode }}" {% if mode == 'widget' %}hidden{% endif %}>
+<div id="chat-root" class="chat-root chat-mode-{{ mode }}" data-api-url="{{ site.chatbot.api_url }}" {% if mode == 'widget' %}hidden{% endif %}>
   <div class="chat-panel" role="dialog" aria-modal="true" aria-label="{{ site.chatbot.name }}">
     <header class="chat-header">
       <div class="chat-header-text">
