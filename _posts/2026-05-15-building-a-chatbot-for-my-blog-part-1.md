@@ -2,7 +2,7 @@
 title: "Building a Chatbot for This Blog — Part 1: The Plan and the Architecture"
 author: nga
 date: 2026-05-15 10:00:00 +0700
-categories: [Technical sharing, AI]
+categories: [AI Generated, AI]
 tags: [ai, chatbot, rag, aws, python, ai-generated]
 render_with_liquid: false
 ---

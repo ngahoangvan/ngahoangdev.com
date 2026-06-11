@@ -2,7 +2,7 @@
 title: "What's New in Kubernetes 1.36 (Haru)"
 author: nga
 date: 2026-04-26 10:00:00 +0700
-categories: [Technical sharing, Kubernetes]
+categories: [AI Generated, Kubernetes]
 tags: [kubernetes, release, security, k8s, ai-generated]
 render_with_liquid: false
 ---

@@ -2,7 +2,7 @@
 title: "AWS in 2026: The Announcements That Actually Matter"
 author: nga
 date: 2026-06-10 10:00:00 +0700
-categories: [Technical sharing, AWS]
+categories: [AI Generated, AWS]
 tags: [aws, cloud, bedrock, cognito, openai, news, certification, ai-generated]
 render_with_liquid: false
 ---

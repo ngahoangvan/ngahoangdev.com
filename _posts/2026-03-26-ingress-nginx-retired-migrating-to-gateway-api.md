@@ -2,7 +2,7 @@
 title: "Ingress NGINX is Dead — Migrating to Gateway API"
 author: nga
 date: 2026-03-26 10:00:00 +0700
-categories: [Technical sharing, Kubernetes]
+categories: [AI Generated, Kubernetes]
 tags: [kubernetes, gateway-api, ingress, nginx, migration, ai-generated]
 render_with_liquid: false
 ---
