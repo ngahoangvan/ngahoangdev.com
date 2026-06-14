@@ -33,34 +33,33 @@
 
 /* start the line at the first node, end it at the last */
 .cv-item:first-child::after {
-  top: 0.55rem;
-  height: calc(100% - 0.55rem);
+  top: 0.6rem;
+  height: calc(100% - 0.6rem);
 }
 
 .cv-item:last-child::after {
-  height: 0.55rem;
+  height: 0.6rem;
 }
 
-/* node dot — same as the Archives post dot */
+/* node dot — same as the Archives year dot (big hollow ring) */
 .cv-item::before {
   content: "";
   position: absolute;
   left: calc(-1.5rem + 2px);
-  top: 0.3rem;
-  width: 8px;
-  height: 8px;
+  top: 0.2rem;
+  width: 12px;
+  height: 12px;
   transform: translateX(-50%);
   border-radius: 50%;
-  background-color: var(--timeline-node-bg);
-  box-shadow: 0 0 3px 0 #c2c6cc;
+  background-color: var(--timeline-year-dot-color);
+  border: 3px solid var(--timeline-node-bg);
+  box-shadow: 0 0 2px 0 #c2c6cc;
   z-index: 1;
 }
 
-/* concurrent (freelance / part-time) roles read as hollow nodes,
-   matching the Archives year-dot ring */
+/* concurrent (freelance / part-time) roles read as a filled node */
 .cv-concurrent::before {
-  background-color: var(--timeline-year-dot-color);
-  border: 2px solid var(--timeline-node-bg);
+  background-color: var(--timeline-node-bg);
 }
 
 .cv-head {
