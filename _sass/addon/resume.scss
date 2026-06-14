@@ -43,10 +43,11 @@
 .cv-item::before {
   content: "";
   position: absolute;
-  left: -1.55rem;
+  left: calc(-1.5rem + 1px); /* the line center: 1.5rem back to the list edge, +1px to the 2px line's middle */
   top: 0.3rem;
   width: 0.7rem;
   height: 0.7rem;
+  transform: translateX(-50%); /* center the dot on that point regardless of its size */
   border-radius: 50%;
   background: var(--chat-accent, #c96442);
   border: 2px solid var(--main-bg);
