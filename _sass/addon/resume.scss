@@ -62,6 +62,18 @@
   background-color: var(--timeline-node-bg);
 }
 
+/* current position — accent-highlighted node and dates */
+.cv-current::before {
+  background-color: var(--chat-accent, #c96442);
+  border-color: var(--chat-accent, #c96442);
+  box-shadow: 0 0 0 4px rgba(201, 100, 66, 0.18);
+}
+
+.cv-current .cv-dates {
+  color: var(--chat-accent, #c96442);
+  font-weight: 500;
+}
+
 .cv-head {
   display: flex;
   flex-wrap: wrap;

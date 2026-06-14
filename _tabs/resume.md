@@ -33,7 +33,7 @@ Senior Software Engineer with 7+ years of experience across web application arch
 The companies I've grown with over the years. Freelance and part-time roles below ran alongside my full-time work.
 
 <ul class="cv-timeline">
-  <li class="cv-item">
+  <li class="cv-item cv-current">
     <div class="cv-head">
       <span class="cv-company">datatize <span class="cv-type">· Contract</span></span>
       <span class="cv-dates">Jun 2026 – Present</span>
