@@ -1,7 +1,6 @@
 /*
-  Resume career timeline — a vertical timeline of companies over time.
-  Used only on the /resume/ page. Colors come from Chirpy variables so it
-  adapts to light/dark mode; the node accent reuses the site accent.
+  Resume career timeline — reuses the Archives timeline styling so the line
+  and nodes match the rest of the site (Chirpy's --timeline-* variables).
 */
 
 .cv-timeline {
@@ -9,26 +8,6 @@
   list-style: none;
   margin: 1.5rem 0;
   padding-left: 1.5rem;
-}
-
-/* the connecting line — accent near the top, settling into the muted
-   theme color, with a soft fade at both ends */
-.cv-timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 2px;
-  border-radius: 2px;
-  background: linear-gradient(
-    to bottom,
-    transparent 0,
-    var(--chat-accent, #c96442) 3%,
-    var(--main-border-color) 25%,
-    var(--main-border-color) 92%,
-    transparent 100%
-  );
 }
 
 .cv-item {
@@ -40,25 +19,48 @@
   }
 }
 
+/* connecting line — a per-item segment, same color/width as Archives */
+.cv-item::after {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem + 2px);
+  top: 0;
+  height: 100%;
+  width: 4px;
+  transform: translateX(-50%);
+  background-color: var(--timeline-color);
+}
+
+/* start the line at the first node, end it at the last */
+.cv-item:first-child::after {
+  top: 0.55rem;
+  height: calc(100% - 0.55rem);
+}
+
+.cv-item:last-child::after {
+  height: 0.55rem;
+}
+
+/* node dot — same as the Archives post dot */
 .cv-item::before {
   content: "";
   position: absolute;
-  left: calc(-1.5rem + 1px); /* the line center: 1.5rem back to the list edge, +1px to the 2px line's middle */
+  left: calc(-1.5rem + 2px);
   top: 0.3rem;
-  width: 0.7rem;
-  height: 0.7rem;
-  transform: translateX(-50%); /* center the dot on that point regardless of its size */
+  width: 8px;
+  height: 8px;
+  transform: translateX(-50%);
   border-radius: 50%;
-  background: var(--chat-accent, #c96442);
-  border: 2px solid var(--main-bg);
-  box-shadow: 0 0 0 4px rgba(201, 100, 66, 0.12);
+  background-color: var(--timeline-node-bg);
+  box-shadow: 0 0 3px 0 #c2c6cc;
+  z-index: 1;
 }
 
-/* concurrent (freelance / part-time) roles read as hollow side-nodes */
+/* concurrent (freelance / part-time) roles read as hollow nodes,
+   matching the Archives year-dot ring */
 .cv-concurrent::before {
-  background: var(--main-bg);
-  border-color: var(--chat-accent, #c96442);
-  box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.1);
+  background-color: var(--timeline-year-dot-color);
+  border: 2px solid var(--timeline-node-bg);
 }
 
 .cv-head {
