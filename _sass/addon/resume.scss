@@ -1,0 +1,71 @@
+/*
+  Resume career timeline — a vertical timeline of companies over time.
+  Used only on the /resume/ page. Colors come from Chirpy variables so it
+  adapts to light/dark mode; the node accent reuses the site accent.
+*/
+
+.cv-timeline {
+  list-style: none;
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--main-border-color);
+}
+
+.cv-item {
+  position: relative;
+  padding-bottom: 1.5rem;
+
+  &:last-child {
+    padding-bottom: 0;
+  }
+}
+
+.cv-item::before {
+  content: "";
+  position: absolute;
+  left: -1.55rem;
+  top: 0.3rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: var(--chat-accent, #c96442);
+  border: 2px solid var(--main-bg);
+}
+
+/* concurrent (freelance / part-time) roles read as hollow side-nodes */
+.cv-concurrent::before {
+  background: var(--main-bg);
+  border-color: var(--chat-accent, #c96442);
+}
+
+.cv-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.15rem 1rem;
+}
+
+.cv-company {
+  font-weight: 600;
+  color: var(--heading-color);
+}
+
+.cv-type {
+  font-weight: 400;
+  color: var(--text-muted-color);
+}
+
+.cv-dates {
+  flex-shrink: 0;
+  color: var(--text-muted-color);
+  font-size: 0.85rem;
+}
+
+.cv-role {
+  color: var(--text-color);
+}
+
+.cv-loc {
+  color: var(--text-muted-color);
+  font-size: 0.85rem;
+}

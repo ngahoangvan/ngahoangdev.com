@@ -28,6 +28,69 @@ Senior Software Engineer with 7+ years of experience across web application arch
 | **CI/CD & Observability** | GitHub Actions, GitLab CI, Bitbucket Pipelines, ELK, Prometheus, Grafana, Datadog |
 | **Practices** | Test-Driven Development, Agile/Scrum |
 
+## Career Timeline
+
+The companies I've grown with over the years. Freelance and part-time roles below ran alongside my full-time work.
+
+<ul class="cv-timeline">
+  <li class="cv-item">
+    <div class="cv-head">
+      <span class="cv-company">datatize <span class="cv-type">· Contract</span></span>
+      <span class="cv-dates">Jun 2026 – Present</span>
+    </div>
+    <div class="cv-role">Software Engineer</div>
+    <div class="cv-loc">Singapore · Remote</div>
+  </li>
+  <li class="cv-item">
+    <div class="cv-head">
+      <span class="cv-company">Saigon Technology <span class="cv-type">· Full-time</span></span>
+      <span class="cv-dates">Nov 2022 – May 2026</span>
+    </div>
+    <div class="cv-role">Python Engineer / Software Engineer</div>
+    <div class="cv-loc">Da Nang, Vietnam · Hybrid</div>
+  </li>
+  <li class="cv-item">
+    <div class="cv-head">
+      <span class="cv-company">datatize <span class="cv-type">· Full-time</span></span>
+      <span class="cv-dates">May 2021 – Oct 2022</span>
+    </div>
+    <div class="cv-role">Python Engineer</div>
+    <div class="cv-loc">Da Nang, Vietnam</div>
+  </li>
+  <li class="cv-item cv-concurrent">
+    <div class="cv-head">
+      <span class="cv-company">STI Technology Solutions <span class="cv-type">· Part-time</span></span>
+      <span class="cv-dates">Nov 2021 – Feb 2022</span>
+    </div>
+    <div class="cv-role">DevOps Developer</div>
+    <div class="cv-loc">Da Nang, Vietnam · Remote</div>
+  </li>
+  <li class="cv-item cv-concurrent">
+    <div class="cv-head">
+      <span class="cv-company">Kinestars <span class="cv-type">· Freelance</span></span>
+      <span class="cv-dates">Mar 2020 – Oct 2021</span>
+    </div>
+    <div class="cv-role">Freelance Software Engineer</div>
+    <div class="cv-loc">Da Nang, Vietnam · Remote</div>
+  </li>
+  <li class="cv-item">
+    <div class="cv-head">
+      <span class="cv-company">D-Soft JSC <span class="cv-type">· Full-time</span></span>
+      <span class="cv-dates">Mar 2019 – Apr 2021</span>
+    </div>
+    <div class="cv-role">Software Engineer – DevOps</div>
+    <div class="cv-loc">Da Nang, Vietnam · On-site</div>
+  </li>
+  <li class="cv-item">
+    <div class="cv-head">
+      <span class="cv-company">GMO-Z.com Vietnam Lab Center <span class="cv-type">· Internship</span></span>
+      <span class="cv-dates">Jan 2019 – Mar 2019</span>
+    </div>
+    <div class="cv-role">DevOps Developer</div>
+    <div class="cv-loc">Da Nang, Vietnam</div>
+  </li>
+</ul>
+
 ## Selected Experience
 
 ### Software Engineer - Multiple Projects
