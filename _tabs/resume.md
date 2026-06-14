@@ -30,8 +30,23 @@ Senior Software Engineer with 7+ years of experience across web application arch
 
 ## Selected Experience
 
+### Software Engineer - Multiple Projects
+*Singapore · May 2026 – Present*
+- Everything that matters in development.
+
+**Tech:** Python, React, PostgreSQL, Docker
+
+### AI / Software Engineer — Legal Contract Discovery System
+*United States · Sep 2025 – May 2026*
+
+- Built an AI-powered contract discovery system that can extract contract information
+- Cleaned up and refactored the codebase to improve the code quality and maintainability.
+- Integrated with other systems like Vercel deployment and AWS services
+
+**Tech:** Python, NestJS, PostgreSQL, Docker
+
 ### AI / Software Engineer — Intelligent Educational Data Platform
-*United States · Jan 2025 – Present*
+*United States · Jan 2025 – April 2026*
 
 - Lead the architecture and implementation of a nationwide platform that builds intelligent learning-data assets for classrooms across the US.
 - Integrated Firecrawl (AI crawler) for URL-based content extraction, and built background-job and batch-processing systems to improve API throughput.
@@ -40,7 +55,7 @@ Senior Software Engineer with 7+ years of experience across web application arch
 **Tech:** Python, NestJS, TypeScript, PostgreSQL, Docker, AWS (EC2, Lambda)
 
 ### Software Engineer — AI-Powered Career Pathway Intelligence Platform
-*United States · Feb 2024 – Present*
+*United States · Feb 2024 – April 2026*
 
 - On a 19-person team, built an AI process that predicts career pathways from live job postings and recommends the courses a user needs to get there.
 - Developed and maintained ETL pipelines aggregating multiple data sources, and used LangChain, RAG, and OpenAI for prediction and recommendations.
