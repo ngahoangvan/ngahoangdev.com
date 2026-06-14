@@ -62,15 +62,21 @@
   background-color: var(--timeline-node-bg);
 }
 
-/* current position — accent-highlighted node and dates */
+/* current position — a glowing accent "bullseye" node and accent dates */
 .cv-current::before {
-  background-color: var(--chat-accent, #c96442);
-  border-color: var(--chat-accent, #c96442);
-  box-shadow: 0 0 0 4px rgba(201, 100, 66, 0.18);
+  top: 0.39rem;
+  width: 6px;
+  height: 6px;
+  border: none;
+  background-color: var(--chat-accent, #1f6feb);
+  box-shadow:
+    0 0 0 2px var(--main-bg),
+    0 0 0 4px var(--chat-accent, #1f6feb),
+    0 0 7px 4px rgba(31, 111, 235, 0.3);
 }
 
 .cv-current .cv-dates {
-  color: var(--chat-accent, #c96442);
+  color: var(--chat-accent, #1f6feb);
   font-weight: 500;
 }
 

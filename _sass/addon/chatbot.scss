@@ -9,12 +9,12 @@ html {
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
     &[data-mode='light'] {
-      --chat-accent: #c96442;
+      --chat-accent: #1f6feb;
       --chat-user-bubble-bg: #f1f3f5;
     }
 
     &[data-mode='dark'] {
-      --chat-accent: #e0825e;
+      --chat-accent: #58a6ff;
       --chat-user-bubble-bg: #32363d;
     }
   }
@@ -22,12 +22,12 @@ html {
   @media (prefers-color-scheme: dark) {
     &:not([data-mode]),
     &[data-mode='dark'] {
-      --chat-accent: #e0825e;
+      --chat-accent: #58a6ff;
       --chat-user-bubble-bg: #32363d;
     }
 
     &[data-mode='light'] {
-      --chat-accent: #c96442;
+      --chat-accent: #1f6feb;
       --chat-user-bubble-bg: #f1f3f5;
     }
   }
