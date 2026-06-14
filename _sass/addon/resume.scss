@@ -5,10 +5,30 @@
 */
 
 .cv-timeline {
+  position: relative;
   list-style: none;
   margin: 1.5rem 0;
   padding-left: 1.5rem;
-  border-left: 2px solid var(--main-border-color);
+}
+
+/* the connecting line — accent near the top, settling into the muted
+   theme color, with a soft fade at both ends */
+.cv-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0,
+    var(--chat-accent, #c96442) 3%,
+    var(--main-border-color) 25%,
+    var(--main-border-color) 92%,
+    transparent 100%
+  );
 }
 
 .cv-item {
@@ -30,12 +50,14 @@
   border-radius: 50%;
   background: var(--chat-accent, #c96442);
   border: 2px solid var(--main-bg);
+  box-shadow: 0 0 0 4px rgba(201, 100, 66, 0.12);
 }
 
 /* concurrent (freelance / part-time) roles read as hollow side-nodes */
 .cv-concurrent::before {
   background: var(--main-bg);
   border-color: var(--chat-accent, #c96442);
+  box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.1);
 }
 
 .cv-head {
