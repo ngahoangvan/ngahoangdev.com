@@ -4,8 +4,11 @@ icon: fas fa-info-circle
 order: 6
 ---
 
-Greetings! 👋 I'm Nga, you can call me Jacob. I'm Python Engineer with 5+ years of hands-on experience which is passionate about leveraging Python's power to build robust applications. With my knowledge of AWS services and Linux, I enjoy architecting scalable solutions that seamlessly blend code and infrastructure. Here you’ll find various articles about some of my insights and challenges long my software development journey.
+Greetings! 👋 I'm Nga — you can call me Jacob. I'm a software engineer who's happiest building things with Python and figuring out how to make systems scale.
 
-I hope you enjoy the content. If you’d like to reach out, the best place right now is to connect on [LinkedIn](https://www.linkedin.com/in/ngahoangvan/) or go to my [Github](https://github.com/ngahoangvan). Thanks!
+This blog is where I write down what I learn along the way: notes on cloud and infrastructure, AI, Kubernetes, and the occasional story from my career. A lot of it started as a reference for my future self — hopefully some of it is useful to you too.
 
+Curious about my professional background? The [Resume]({{ '/resume/' | relative_url }}) page has the full picture: roles, projects, and the tools I've worked with.
+
+> I hope you enjoy the content. If you’d like to reach out, the best place is to connect on [LinkedIn](https://www.linkedin.com/in/ngahoangvan/) or [GitHub](https://github.com/ngahoangvan). Thanks for stopping by!
 {: .prompt-info }
